@@ -12,6 +12,7 @@ def create_project_hash
     # title, an image, a short description, a location and some funding details
     puts title = project.css('h2.bbcard_name strong a').text
     puts image_link = project.css('img.projectphoto-little').attribute('src')
+    puts location = project.css('span.location-name').text
     puts description = project.css('p.bbcard_blurb').text
   end
 end
