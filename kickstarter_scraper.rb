@@ -14,5 +14,6 @@ def create_project_hash
     puts image_link = project.css('img.projectphoto-little').attribute('src')
     puts location = project.css('span.location-name').text
     puts description = project.css('p.bbcard_blurb').text
+    puts percent_funded = project.css('li.funded').text
   end
 end
