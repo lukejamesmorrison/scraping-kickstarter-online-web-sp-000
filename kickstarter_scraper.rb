@@ -9,6 +9,6 @@ def create_project_hash
 
   projects.each do |project|
     puts project
-    puts title = project.css('bbcard_name strong a').text
+    # puts title = project.css('bbcard_name strong a').text
   end
 end
