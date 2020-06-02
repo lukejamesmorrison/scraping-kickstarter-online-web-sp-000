@@ -7,5 +7,6 @@ def create_project_hash
 
   projects = kickstarter.css('li.project')
 
-  puts projects
+  projects.each do |project|
+  end
 end
