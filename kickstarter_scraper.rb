@@ -7,13 +7,17 @@ def create_project_hash
   kickstarter = Nokogiri::HTML(html)
 
   kickstarter.css('li.project').each do |project|
-
     # title, an image, a short description, a location and some funding details
-    puts title = project.css('h2.bbcard_name strong a').text
-    puts image_link = project.css('img.projectphoto-little').attribute('src')
-    puts location = project.css('span.location-name').text
-    puts description = project.css('p.bbcard_blurb').text
-    puts percent_funded = project.css('li.funded').text
+    title = project.css('h2.bbcard_name strong a').text
+
+    projects[title.to_sym] = {
+      image_link = project.css('img.projectphoto-little').attribute('src')
+      puts location = project.css('span.location-name').text
+      puts description = project.css('p.bbcard_blurb').text
+      puts percent_funded = project.css('li.funded').text
+    }
+
+
 
 
   end
