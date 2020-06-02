@@ -17,6 +17,8 @@ def create_project_hash
       :percent_funded => project.css('li.funded').text
     }
 
+    projects
+
 
 
 
