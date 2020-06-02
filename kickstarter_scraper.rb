@@ -2,6 +2,7 @@
 require 'nokogiri'
 
 def create_project_hash
+  projects = {}
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
 
@@ -14,5 +15,7 @@ def create_project_hash
     puts location = project.css('span.location-name').text
     puts description = project.css('p.bbcard_blurb').text
     puts percent_funded = project.css('li.funded').text
+
+
   end
 end
