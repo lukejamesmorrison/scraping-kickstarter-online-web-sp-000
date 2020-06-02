@@ -16,7 +16,7 @@ def create_project_hash
       :description => project.css('p.bbcard_blurb').text,
       :percent_funded => project.css('li.funded').text
     }
-
-    projects
   end
+
+  projects
 end
